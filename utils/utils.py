@@ -718,7 +718,7 @@ def gen_ex2(n):
   target1 = make_batch(n, rec = 0., noisy_rec= 0., disc = 0.0015)
   target2 = make_batch(n, rec = 0.0015, noisy_rec= 0.0015, disc = 0.)
   target = 100 * target1.mean(dim=(1,2,3))
-  print(target)
+  #print(target)
   m = torch.normal(target, 1.)
   input = target1 + target2
   target = m
